@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.custom-row{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 60px;
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'Audiowide', cursive;
+    letter-spacing: 2px;
+}
+
+h3{
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+h4{
+    margin-bottom: 0px;
+}
+
+h6{
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.h1PrimaryColor{
+    color: #706FD3;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+}
