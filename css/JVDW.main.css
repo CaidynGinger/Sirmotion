@@ -1,0 +1,17 @@
+.video {
+    height: 40vh;
+}
+
+.movie-row {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-tile {
+    background-color: blueviolet;
+    height: 90%;
+    width: 90%;
+}
+
