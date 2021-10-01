@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap");
+body {
+  margin: 0;
+  background-color: rgb(49, 49, 49);
+}
+
+a {
+  color: #ffffff;
+}
+
+.logo {
+  background: url(../img/logo_1.png) no-repeat 6px center;
+  width: 120px;
+  height: 40px;
+}
+/* header */
+
+.header {
+  background-color: rgb(17, 17, 17);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #1e1e1f;
+  text-decoration: none;
+  background-color: rgb(17, 17, 17);
+  font-size: 1em;
+  font-weight: 500px;
+  transition: 0.2s ease-out;
+}
+/* hover state */
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #706fd3;
+  letter-spacing: 2px;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+/* humburger menu  icon  */
+.header .menu-icon .nav-icon {
+  background: #706fd3;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: 0.2s ease-out;
+  width: 18px;
+}
+/* humburger menu  icon */
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #706fd3;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+/* humburger menu animating */
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* break point 1024 ipad pro screen */
+
+@media (min-width: 1025px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
