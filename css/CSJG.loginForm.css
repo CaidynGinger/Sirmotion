@@ -1,4 +1,82 @@
+main{
+    background-image: linear-gradient(#260E48e6,#260E48e6),url(../recorces/img/Group\ 51\ 2.png);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+}
+
+
+
+.img-container{
+    margin-left: 50px;
+    padding-top: 50px;
+    height: 170px;
+    width: 120px;
+}
+@media screen and (max-width: 1200px){
+    .img-container{
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .img-container{
+        width: 15%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .img-container{
+        padding-top: 10px;
+        margin-left: 20px;
+    }
+}
+
+footer{
+    height: 250px;
+    width: 100%;
+    background-color: #333;
+}
+
+.hero-text{
+    background-color: turquoise;
+    aspect-ratio: 1;
+}
+
 .login-form{
+    background-color: thistle;
+    aspect-ratio: 1;
+}
+
+.watch-anywhere-artical{
+    margin-top: 100px;
+    padding-bottom: 60px;
+
+}
+
+.watch-anywhere-text{
+    background-color: teal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .login-form{
     background-color: rgba(255, 255, 255, 0.3);
     width: 100%;
     margin-top: 20px;
@@ -8,6 +86,8 @@
     align-items: center;
 }
 
+
+
 .text-card-login{
     display: flex;
     justify-content: center;
@@ -15,6 +95,13 @@
     width: 100%;
     margin-top: 20px;
     aspect-ratio: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .text-card-login{
+        aspect-ratio: unset;
+        margin-top: 200px;
+    }
 }
 
 .text-card-login-spacer{
@@ -56,4 +143,4 @@
 
 .slider-button{
     border-radius: 10px;
-}
+} */
