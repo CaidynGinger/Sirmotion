@@ -1,17 +1,107 @@
-.video {
-    height: 40vh;
+body {
+    margin: auto;
+    padding: 0;
+    background-color: #111016;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .video {} */
+
+.container-fluid {
+    padding: 0;
 }
 
 .movie-row {
-    height: 30vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#home-main-movie {
+    height: 42vh;
+    object-fit: cover;
+    padding: 0;
+}
+
+#individual-movie-img {
+    height: 30vh;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.movie {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 13px;
+    padding: 5px;
+    margin-bottom: 3vh;
+    background-color: #2D2C54;
+    color: white;
+}
+
+.summary {
+    margin-top: -6vh;
+    height: 25vh;
+    position: relative;
+}
+
+.cast {
+    height: 20vh;
+}
+
+.reviews {
+    height: 50vh;
+}
+
+.review-card {
+    height: 100px;
+    background-color: #706FD3;
+    border-radius: 13px;
+}
+
+.media {
+    height: 50vh;
+}
+
+.other {
+    height: 15vh;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {}
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+
+@media (min-width: 768px) {}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    #home-main-movie {
+        height: 75vh;
+    }
+    #individual-movie-img {
+        height: 40vh;
+    }
+    .movie-summary {
+        height: 40vh;
+    }
+}
+
 .movie-tile {
-    background-color: blueviolet;
+    background-color: #c4c4c4;
     height: 90%;
     width: 90%;
 }
-
