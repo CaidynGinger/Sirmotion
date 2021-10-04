@@ -19,7 +19,7 @@ img{
 
 h1{
     font-size: 60px;
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
     font-family: 'Audiowide', cursive;
     letter-spacing: 2px;
@@ -54,4 +54,10 @@ p{
     font-size: 24px;
     text-align: center;
     font-weight: 300;
+}
+
+.centeralign-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
