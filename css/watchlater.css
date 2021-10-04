@@ -1,0 +1,72 @@
+.header {
+  background-color: rgb(87, 87, 87);
+  height: 80px;
+}
+
+.movie-banner {
+  background-image: url("/img/bk_image.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  background-color: grey;
+  text-align: left;
+  padding-top: 200px;
+}
+a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+}
+p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.my-list {
+  background-color: rgb(14, 14, 14);
+}
+.movie-items {
+  height: 150px;
+  background-color: rgb(151, 151, 151);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(170, 170, 170);
+}
+
+.child {
+  width: 90%;
+  height: 150px;
+  background-color: rgb(153, 153, 153);
+
+  margin: 0, auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: rgb(88, 88, 88);
+  height: 100px;
+}
