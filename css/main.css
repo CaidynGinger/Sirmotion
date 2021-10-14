@@ -9,9 +9,6 @@ img{
     height: auto;
 }
 
-
-
-
 .custom-row{
     max-width: 1440px;
     margin: 0 auto;
@@ -24,6 +21,7 @@ h1{
     font-family: 'Audiowide', cursive;
     letter-spacing: 2px;
 }
+
 
 h3{
     font-size: 32px;
@@ -60,4 +58,19 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 576px){
+    h1{
+        font-size: 36px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 18px;
+    }
 }
