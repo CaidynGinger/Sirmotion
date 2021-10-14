@@ -33,15 +33,28 @@ main{
     }
 }
 
-footer{
-    height: 250px;
-    width: 100%;
-    background-color: #333;
-}
 
 .hero-text{
     aspect-ratio: 1;
 }
+
+.watch-anywhere-text{
+    text-align: center;
+}
+
+.watch-anywhere-text p {
+    font-size: 20px;
+}
+
+.watch-anywhere-text h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 26px;
+}
+
+
 
 .login-form{
     background-color: thistle;
@@ -54,10 +67,11 @@ footer{
 
 }
 
-.watch-anywhere-text{
-    background-color: teal;
+@media screen and (max-width: 1400px){
+    .login-form, .hero-text{
+        aspect-ratio: auto;
+    }
 }
-
 
 
 
