@@ -85,18 +85,57 @@ body {
     font-family: var(--montserratFontFamily);
 }
 
-.cast {
-    height: 20vh;
+.cast-img {
+    width: 170px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.reviews {
-    height: 50vh;
+.movie-cast-imgs {
+    margin-top: 15px;
+    margin-bottom: 15PX;
+}
+
+.reviews {}
+
+.review-by {
+    font-family: var(--montserratFontFamily);
+    font-size: 18px;
 }
 
 .review-card {
-    height: 100px;
     background-color: #706FD3;
     border-radius: 13px;
+    padding: 5px;
+    max-height: 220px;
+    margin: 1%;
+    width: 48%;
+}
+
+.review-date {
+    font-family: var(--montserratFontFamily);
+    font-size: 15px;
+    font-style: italic;
+}
+
+.review-img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review-rating {
+    text-align: right;
+    font-family: var(--montserratFontFamily);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.review-content {
+    font-family: var(--montserratFontFamily);
+    font-size: 17px;
 }
 
 .media {

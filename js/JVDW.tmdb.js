@@ -13,29 +13,7 @@ function GetMostPopularMovies(callbackFunction) {
 
 function GetMovieInformation(movieId, callbackFunction) {
     // https://developers.themoviedb.org/3/movies/get-movie-details
-    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US`, function(result) {
+    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US&append_to_response=reviews,credits,videos`, function(result) {
         callbackFunction(result);
-    });
-}
-
-function GetMovieReviews(movieId, callbackFunction) {
-    // https://developers.themoviedb.org/3/movies/reviews
-    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${TMDB_API_KEY}&language=en-US`, function(result) {
-        callbackFunction(result.results);
-    });
-}
-
-function GetMovieCast(movieId, callbackFunction) {
-    // https://developers.themoviedb.org/3/movies/get-movie-credits
-    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${TMDB_API_KEY}&language=en-US`, function(result) {
-        callbackFunction(result.cast);
-    });
-}
-
-function GetMovieTrailer(movieId, callbackFunction) {
-    // https: //developers.themoviedb.org/3/movies/get-movie-videos
-    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${TMDB_API_KEY}&language=en-US`, function(result) {
-        var mostRecentOfficialTrailers = result.results.filter(video => video.official && video.type == 'Trailer' && video.site == 'YouTube').sort(function(a, b) { return b.published_at - a.published_at });
-        callbackFunction(mostRecentOfficialTrailers[0]);
     });
 }
