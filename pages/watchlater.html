@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Watch Later Page</title>
-    <!--CSS Link-->
-    <link rel="stylesheet" href="/css/watchlater.css" />
+
     <!--CSS Link-->
     <link
       rel="stylesheet"
@@ -20,14 +19,26 @@
       integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
       crossorigin="anonymous"
     ></script>
+    <!--CSS Link-->
+    <link rel="stylesheet" href="/css/watchlater.css" />
+    <link rel="stylesheet" href="/css/TM.navBar.css" />
   </head>
   <body>
+    <header class="header">
+      <!--logo-->
+      <a href="/" class="logo"></a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="nav-icon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="/pages/JVDW.homepage.html">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="/pages/watchlater.html">My Liked List</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </header>
     <div class="container-fluid">
-      <div class="row header">
-        <div class="col-12">header content</div>
-        <!--header-->
-      </div>
-
       <div class="row">
         <div class="col-12 movie-banner">
           <h1>Joker</h1>
@@ -37,7 +48,7 @@
             eveniet numquam necessitatibus doloremque neque provident aperiam
             molestiae deserunt veniam? Iure, libero illum.
           </p>
-          <a href="">Watch Now</a>
+          <div class="watch-now">Watch Now</div>
         </div>
       </div>
       <div class="row my-list">
