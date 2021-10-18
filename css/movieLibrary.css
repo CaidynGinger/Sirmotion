@@ -1,59 +1,202 @@
-.body {
-  background-color: #2e2e2e;
+:root {
+  --audioWideFontFamily: "Audiowide", cursive;
+  --montserratFontFamily: "Montserrat", sans-serif;
 }
 
-.filters {
-  background-color: rgb(134, 134, 134);
-  height: 100px;
+body {
+  margin: auto;
+  padding: 0;
+  background-color: #111016;
 }
-.header {
-  background-color: rgb(61, 61, 61);
-  height: 100px;
 
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+#tags {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.tag {
   color: white;
-  text-align: center;
+  padding: 10px 15px;
+  background-color: purple;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
 }
-h2 {
-  color: rgb(119, 119, 119);
-  padding-top: 20px;
-}
+/* .video {} */
 
-.movie-banner {
-  height: 300px;
-  background-color: grey;
-  text-align: left;
-  padding-top: 100px;
-}
-.movies-list {
-  background-color: rgb(34, 34, 34);
+.container-fluid {
+  padding: 0;
 }
 
-.movie-items {
-  height: 150px;
-  background-color: rgb(146, 146, 146);
-  border-width: 2px;
-  border-style: solid;
-  border-color: rgb(216, 216, 216);
+.movie-row {
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.child {
-  width: 90%;
-  height: 150px;
-  background-color: rgb(100, 100, 100);
-
-  margin: 0, auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+#home-main-movie {
+  height: 42vh;
+  object-fit: cover;
+  padding: 0;
 }
 
-.footer {
-  background-color: rgb(53, 53, 53);
-  height: 120px;
-  position: fixed;
-
-  bottom: 0;
+#individual-movie-img {
+  height: 80vh;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
   width: 100%;
+}
 
+.movie {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 13px;
+  padding: 5px;
+  margin-bottom: 3vh;
+  background-color: #2d2c54;
   color: white;
+  padding: 15px;
+}
+
+.movie-img-container {
+  position: relative;
   text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+#movie-title {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  color: white;
+  font-family: var(--audioWideFontFamily);
+  font-size: 3rem;
+}
+
+.movie-section-title {
+  font-family: var(--audioWideFontFamily);
+}
+
+.summary {
+  margin-top: -6vh;
+  position: relative;
+  font-family: var(--audioWideFontFamily);
+}
+
+.movie-section-details {
+  margin: 15px 0px 15px 0px;
+  font-family: var(--montserratFontFamily);
+}
+
+.cast-img {
+  width: 170px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.movie-cast-imgs {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.reviews {
+}
+
+.review-by {
+  font-family: var(--montserratFontFamily);
+  font-size: 18px;
+}
+
+.review-card {
+  background-color: #706fd3;
+  border-radius: 13px;
+  padding: 5px;
+  max-height: 220px;
+  margin: 1%;
+  width: 48%;
+}
+
+.review-date {
+  font-family: var(--montserratFontFamily);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.review-img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review-rating {
+  text-align: right;
+  font-family: var(--montserratFontFamily);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.review-content {
+  font-family: var(--montserratFontFamily);
+  font-size: 17px;
+}
+
+.media {
+  height: 50vh;
+}
+
+.other {
+  height: 15vh;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+  #home-main-movie {
+    height: 75vh;
+  }
+  .movie-row {
+    height: 45vh;
+  }
+  .movie-summary {
+    height: 40vh;
+  }
+}
+
+.movie-tile {
+  background-color: #c4c4c4;
+  height: 90%;
+  width: 90%;
+  cursor: pointer;
+}
+
+.movie-tile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
