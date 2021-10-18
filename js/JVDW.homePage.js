@@ -1,7 +1,8 @@
 $(document).ready(function() {
-    // $("#home-main-movie").attr("src", backDropPath);
-
     GetMostPopularMovies(function(mostPopularMovies) {
+        let backDropPath = `${TMDB_IMAGE_API_BASE_URL}${mostPopularMovies[12].backdrop_path}`;
+        $("#home-main-movie").attr("src", backDropPath);
+
         $(".movie-tile").each(function(i, obj) {
             let currentMovie = mostPopularMovies[i];
             $(this).attr("id", currentMovie.id);
