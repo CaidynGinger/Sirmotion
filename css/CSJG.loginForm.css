@@ -141,11 +141,3 @@ form p {
 #register{
     left: 1000px;
 }
-
-
-.message{
-    margin-top: 90px;
-    padding: 5px;
-    text-align: center;
-    border-radius: 100px;
-}

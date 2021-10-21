@@ -40,7 +40,6 @@
     <script src="js/CSJG.form.inputs.js"></script>
     <script src="js/CSJG.TmdbApiGetData.service.js"></script>
     <script src="js/CSJG.formSelector.Service.js"></script>
-    <script src="js/CSJG.formValidation.js"></script>
 
 </head>
 
@@ -72,17 +71,16 @@
                                 <div><a class="sign-up-btn">Sign Up</a></div>
                             </div>
                             <div class="form-box">
-                                <form id="login" class="form-group" autocomplete="off" onsubmit="return false">
+                                <form id="login" class="form-group" autocomplete="off">
                                     <div class="input-group">
-                                        <input type="text" id="loginUsername" class="form-control" required/>
-                                        <label>Username</label>
+                                        <input type="email" class="form-control" required/>
+                                        <label>Email</label>
                                     </div>
                                     <div class="input-group">
-                                        <input type="password" id="loginPassword" class="form-control" required/>
+                                        <input type="password" class="form-control" required/>
                                         <label>Password</label>
                                     </div>
-                                    <button class="login-btn">Login</button>
-                                    <div class="message"></div>
+                                    <button>Login</button>
                                 </form>
                                 <form id="register" class="form-group" autocomplete="off">
                                     <div class="input-group">
@@ -90,24 +88,19 @@
                                         <label>Email</label>
                                     </div>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" />
+                                        <input type="email" class="form-control" />
                                         <label>Username</label>
                                     </div>
                                     <div class="input-group">
-                                        <input 
-                                        type="password" 
-                                        class="form-control" 
-                                        pattern="(?=.*/d)(?=.[a-z])(?=.*[A-Z]).{8,}"
-                                        required/>
+                                        <input type="email" class="form-control" />
                                         <label>Password</label>
                                     </div>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" required/>
+                                        <input type="password" class="form-control" />
                                         <label>Repeat Password</label>
                                     </div>
                                     <button>Create Account</button>
                                 </form>
-                                
                             </div>
                         </div>
                         
