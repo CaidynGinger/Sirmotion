@@ -63,24 +63,47 @@
                         </div>
                     </section>
                     <section class="col-xl-12 col-xxl-6 login-form">
-                        <form>
+                        <div class="form-row">
                             <p>Sign In to start streaming. If you don’t have and account Sign up</p>
-                                <div class="button-container">
-                                    <div class="button-selection button-selection-left"></div>
-                                    <div><a class="sign-in-btn">Sign In</a></div>
-                                    <div><a class="sign-up-btn">Sign Up</a></div>
-                                </div>
-                            
-                            <div class="input-group">
-                                <input type="email" class="form-control" />
-                                <label>Email</label>
+                            <div class="button-container">
+                                <div class="button-selection button-selection-left"></div>
+                                <div><a class="sign-in-btn">Sign In</a></div>
+                                <div><a class="sign-up-btn">Sign Up</a></div>
                             </div>
-                            <div class="input-group">
-                                <input type="password" class="form-control" />
-                                <label>Password</label>
+                            <div class="form-box">
+                                <form id="login" class="form-group" autocomplete="off">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" required/>
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" required/>
+                                        <label>Password</label>
+                                    </div>
+                                    <button>Login</button>
+                                </form>
+                                <form id="register" class="form-group" autocomplete="off">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" />
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" />
+                                        <label>Username</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" />
+                                        <label>Password</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" />
+                                        <label>Repeat Password</label>
+                                    </div>
+                                    <button>Create Account</button>
+                                </form>
                             </div>
-                            <button>Login</button>
-                        </form>
+                        </div>
+                        
                     </section>
                 </div>
             </div>

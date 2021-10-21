@@ -31,6 +31,11 @@ main{
     }
 }
 
+.form-row{
+   margin: 0 auto;
+   width: 80%;
+   overflow: hidden; 
+}
 
 .hero-text{
     aspect-ratio: 1;
@@ -71,7 +76,7 @@ main{
 @media screen and (max-width: 1400px){
     .login-form, .hero-text{
         aspect-ratio: auto;
-        padding-bottom: 36px;
+        padding-top: 36px;
         width: 80%;
         margin: 0 auto;
     }
@@ -107,109 +112,32 @@ form p {
     color: white;
 }
 
+.form-box{
+    position: relative;
+    height: 350px;
+}
+
 .button-selection{
     height: 45px;
     background-color: #706FD3;
-    width: 50%;
+    width: 51%;
     position: absolute;
     z-index: 1;
     transition: all 0.5s ease-in-out;
-    left: 0;
+    left: -1px;
     border-radius:0 5px 5px 0;
 }
 
+.form-group{
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
 
-/* .button-selection-left{
+#login{
     left: 0;
-    border-radius:0 10px 10px 0;
-}
-.button-selection-right{
-    right: 0;
-    border-radius: 10px 0 0 10px;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .login-form{
-    background-color: rgba(255, 255, 255, 0.3);
-    width: 100%;
-    margin-top: 20px;
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-
-
-.text-card-login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
-    aspect-ratio: 1;
+#register{
+    left: 1000px;
 }
-
-@media screen and (max-width: 1200px) {
-    .text-card-login{
-        aspect-ratio: unset;
-        margin-top: 200px;
-    }
-}
-
-.text-card-login-spacer{
-    max-width: 80%;
-    margin: 0 auto;
-    margin-top: -160px;
-}
-
-.slider-button {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    border: 4px #706FD3 solid;
-}
-
-.slider-button-flex-item{
-    text-align: center;
-    cursor: pointer;
-}
-
-.slider-button-flex-item:nth-child(1) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: stretch;
-    width: 50%;
-    background-color: #706FD3;
-    border-radius: 8px;
-}
-
-.slider-button-flex-item:nth-child(2) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: stretch;
-    width: 50%;
-}
-
-.slider-button{
-    border-radius: 10px;
-} */
