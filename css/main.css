@@ -4,6 +4,8 @@
     color: white;
 }
 
+::-webkit-validation-bubble-message { display: none; }
+
 img{
     width: 100%;
     height: auto;
