@@ -1,142 +1,62 @@
-const TMDB_BASE_URL = "https://api.themoviedb.org/3/";
-const TMDB_IMAGE_API_BASE_URL = "https://image.tmdb.org/t/p/original";
-const TMDB_API_KEY = "57db82bc0de6cdceb2fd80b8ab052215";
-const API_URL = TMDB_BASE_URL + '/discover/movie?sort_by=popularity.desc&'+ TMDB_API_KEY;
+var selectedGenre = "";
+var selectedYear = undefined;
+var selectedRating = 0;
 
+$(document).ready(function() {
+    populateFilters();
+    applyFilters();
 
+    $(".movie-tile").click(function() {
+        location.href = `JVDW.moviePage.html?id=${$(this).attr("id")}`;
+    });
+});
 
-const genres = [
-    {
-      "id": 28,
-      "name": "Action"
-    },
-    {
-      "id": 12,
-      "name": "Adventure"
-    },
-    {
-      "id": 16,
-      "name": "Animation"
-    },
-    {
-      "id": 35,
-      "name": "Comedy"
-    },
-    {
-      "id": 80,
-      "name": "Crime"
-    },
-    {
-      "id": 99,
-      "name": "Documentary"
-    },
-    {
-      "id": 18,
-      "name": "Drama"
-    },
-    {
-      "id": 10751,
-      "name": "Family"
-    },
-    {
-      "id": 14,
-      "name": "Fantasy"
-    },
-    {
-      "id": 36,
-      "name": "History"
-    },
-    {
-      "id": 27,
-      "name": "Horror"
-    },
-    {
-      "id": 10402,
-      "name": "Music"
-    },
-    {
-      "id": 9648,
-      "name": "Mystery"
-    },
-    {
-      "id": 10749,
-      "name": "Romance"
-    },
-    {
-      "id": 878,
-      "name": "Science Fiction"
-    },
-    {
-      "id": 10770,
-      "name": "TV Movie"
-    },
-    {
-      "id": 53,
-      "name": "Thriller"
-    },
-    {
-      "id": 10752,
-      "name": "War"
-    },
-    {
-      "id": 37,
-      "name": "Western"
-    }
-  ]
-  const tagsEl = document.getElementById('tags');
-
-  window.onload = function() {
-
-    var selectedGenre = []
-    setGenre();
-    
-    function setGenre() {
-        tagsEl.innerHTML= '';
+function populateFilters() {
+    // Genre
+    $("#genre").empty();
+    $("#genre").append(`<option value="-1">Genre</option>`);
+    GetGenreList(function(genres) {
         genres.forEach(genre => {
-            const t = document.createElement('div');
-            t.classList.add('tag');
-            t.id=genre.id;
-            t.innerText = genre.name;
-            t.addEventListener('click', () => {
-                if(selectedGenre.length == 0){
-                    selectedGenre.push(genre.id);
-                }else{
-                    if(selectedGenre.includes(genre.id)){
-                        selectedGenre.forEach((id, idx) => {
-                            if(id == genre.id){
-                                selectedGenre.splice(idx, 1);
-                            }
-                        })
-                    }else{
-                        selectedGenre.push(genre.id);
-                    }
-                }
-                console.log(selectedGenre)
-                GetMovies(API_URL + '&with_genres='+encodeURI(selectedGenre.join(',')))
-                highlightSelection()
-            })
-            tagsEl.append(t);
+            // add options to select
+            $("#genre").append(`<option value="${genre.id}">${genre.name}</option>`);
         })
+    });
+    $("#genre").on("change", function() {
+        selectedGenre = $(this).val();
+        applyFilters();
+    });
+
+    // years
+    $("#year").empty();
+    $("#year").append(`<option value="${undefined}">Year</option>`);
+    for (var yearOption = 2021; yearOption >= 2011; yearOption--) {
+        // add options to select
+        $("#year").append(`<option value="${yearOption}">${yearOption}</option>`);
     }
+
+    $("#year").on("change", function() {
+        selectedYear = $(this).val();
+        applyFilters();
+    });
+
+    // Rating
+    $("#rating").on("change", function() {
+        selectedRating = $(this).val();
+        applyFilters();
+    });
 
 }
 
-
-
-$(document).ready(function() {});
-
-
-
-function GetMostPopularMovies(callbackFunction) {
-    // https://developers.themoviedb.org/3/movies/get-popular-movies
-    $.getJSON(`${TMDB_BASE_URL}movie/popular?api_key=${TMDB_API_KEY}&language=en-US`, function(result) {
-        callbackFunction(result.results);
+function applyFilters() {
+    GetFilteredMovies(selectedYear == -1 ? undefined : selectedYear, selectedGenre == "-1" ? "" : selectedGenre, selectedRating, function(movies) {
+        SetMovies(movies);
     });
 }
 
-function GetMovieInformation(movieId, callbackFunction) {
-    // https://developers.themoviedb.org/3/movies/get-movie-details
-    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US&append_to_response=reviews,credits,videos`, function(result) {
-        callbackFunction(result);
+function SetMovies(movies = []) {
+    $(".movie-tile").each(function(i, obj) {
+        let currentMovie = movies[i];
+        $(this).attr("id", currentMovie.id);
+        $(this).html(`<img class="movie-tile-img" src="${TMDB_IMAGE_API_BASE_URL}${currentMovie.poster_path}" alt="${currentMovie.title} image">`);
     });
 }

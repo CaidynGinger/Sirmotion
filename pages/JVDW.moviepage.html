@@ -44,8 +44,20 @@
             </div>
         </div>
         <div class="row movie summary">
+            <img class="play-button" src="../img/play-button.svg">
+            <div class="row movie-genres"></div>
+            <div class="row movie-details">
+                <div class="movie-detail release-date"></div>
+                <div class="movie-detail runtime"></div>
+                <div class="row movie-detail" style="--bs-gutter-x: 2px;width: 80px;">
+                    <img class="col-6 star" src="../img/star.svg">
+                    <div class="col-6 vote-avg"></div>
+                </div>
+            </div>
             <div class="row movie-section-title">Summary</div>
-            <div class="movie-section-details"></div>
+            <div class="row movie-summary"></div>
+            <div class="row movie-crew"></div>
+            <div class="watch-later btn btn-like" style="right: 2%; position: absolute; bottom: 3%;">Add to liked</div>
         </div>
 
         <div class="row movie cast">
@@ -61,10 +73,41 @@
 
         <div class="row movie media">
             <div class="row movie-section-title">Media</div>
+            <div class="row movie-media"></div>
         </div>
 
-        <div class="row movie other">
+        <div class="row movie other-details">
             <div class="row movie-section-title">Other Details</div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="additional-info col-4 col-sm-4 col-md-3 col-xl-3">
+                    <div class="additional-info-primary">
+                        Status
+                    </div>
+                    <div id="movie-status" class="additional-info-secondary">
+                    </div>
+                </div>
+                <div class="additional-info col-4 col-sm-4 col-md-3 col-xl-3">
+                    <div class="additional-info-primary">
+                        Original Language
+                    </div>
+                    <div id="movie-language" class="additional-info-secondary">
+                    </div>
+                </div>
+                <div class="additional-info col-4 col-sm-4 col-md-3 col-xl-3">
+                    <div class="additional-info-primary">
+                        Budget
+                    </div>
+                    <div id="movie-budget" class="additional-info-secondary">
+                    </div>
+                </div>
+                <div class="additional-info col-4 col-sm-4 col-md-3 col-xl-3">
+                    <div class="additional-info-primary">
+                        Revenue
+                    </div>
+                    <div id="movie-revenue" class="additional-info-secondary">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--container-fluid-->
