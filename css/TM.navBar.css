@@ -1,165 +1,157 @@
 body {
-    margin: auto;
-    padding: 0;
-    background-color: #111016;
+  margin: auto;
+  padding: 0;
+  background-color: #111016;
 }
 
 a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .logo {
-    background: url(../img/logo_1.png) no-repeat 6px center;
-    width: 160px;
-    height: 30px;
-    margin-top: 15px;
-    margin-right: 15px;
+  background: url(../img/logo_1.png) no-repeat 6px center;
+  width: 160px;
+  height: 30px;
+  margin-top: 15px;
+  margin-right: 15px;
 }
-
 
 /* header */
 
 .header {
-    background-color: #111016;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: zero;
-    width: 100%;
-    z-index: 3;
+  background-color: #111016;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: zero;
+  width: 100%;
+  z-index: 3;
 }
 
 .header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .header li a {
-    display: block;
-    padding: 20px 20px;
-    text-decoration: none;
-    background-color: #111016;
-    font-size: 1em;
-    font-weight: 500px;
-    transition: 0.2s ease-out;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  background-color: #111016;
+  font-size: 1em;
+  font-weight: 500px;
+  transition: 0.2s ease-out;
 }
-
 
 /* hover state */
 
 .header li a:hover,
 .header .menu-btn:hover {
-    color: #706fd3;
-    letter-spacing: 2px;
+  color: #706fd3;
+  letter-spacing: 2px;
 }
 
 .header .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    padding: 10px 20px;
-    text-decoration: none;
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
 }
-
 
 /* menu */
 
 .header .menu {
-    clear: both;
-    max-height: 0;
-    transition: 0.2s ease-out;
+  clear: both;
+  max-height: 0;
+  transition: 0.2s ease-out;
 }
-
 
 /* menu icon */
 
 .header .menu-icon {
-    cursor: pointer;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
+  cursor: pointer;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  float: right;
 }
-
 
 /* humburger menu  icon  */
 
 .header .menu-icon .nav-icon {
-    background: #706fd3;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: 0.2s ease-out;
-    width: 18px;
+  background: #706fd3;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: 0.2s ease-out;
+  width: 18px;
 }
-
 
 /* humburger menu  icon */
 
 .header .menu-icon .nav-icon:before,
 .header .menu-icon .nav-icon:after {
-    background: #706fd3;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    width: 100%;
+  background: #706fd3;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
 }
 
 .header .menu-icon .nav-icon:before {
-    top: 5px;
+  top: 5px;
 }
 
 .header .menu-icon .nav-icon:after {
-    top: -5px;
+  top: -5px;
 }
-
 
 /* menu btn */
 
 .header .menu-btn {
-    display: none;
+  display: none;
 }
-
 
 /* humburger menu animating */
 
-.header .menu-btn:checked~.menu {
-    max-height: 240px;
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
 }
 
-.header .menu-btn:checked~.menu-icon .nav-icon {
-    background: transparent;
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
 }
 
-.header .menu-btn:checked~.menu-icon .nav-icon:before {
-    transform: rotate(-45deg);
-    top: 0;
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
-.header .menu-btn:checked~.menu-icon .nav-icon:after {
-    transform: rotate(45deg);
-    top: 0;
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
 }
-
 
 /* break point 1024 ipad pro screen */
 
 @media (min-width: 1025px) {
-    .header li {
-        float: left;
-    }
-    .header li a {
-        padding: 20px 30px;
-    }
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .header .menu-icon {
-        display: none;
-    }
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }
