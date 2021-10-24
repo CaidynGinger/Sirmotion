@@ -1,5 +1,5 @@
 .movie-banner {
-  background-image: url("/img/bk_image.jpg");
+  /* background-image: url("/img/bk_image.jpg"); */
   background-position: center;
   background-size: cover;
   height: 450px;
@@ -63,4 +63,15 @@ p {
 .footer {
   background-color: rgb(88, 88, 88);
   height: 100px;
+}
+
+.child.watch-later-movie {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.child.watch-later-movie span {
+  margin-bottom: 20px;
 }

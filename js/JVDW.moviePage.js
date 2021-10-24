@@ -1,14 +1,23 @@
+// variables for watch later function
+let movieTitle;
+let backDropPath;
+let movieId;
+
 $(document).ready(async function() {
     let languageNames = new Intl.DisplayNames(['en'], { type: 'language' });
     let numberFormat = new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' });
     const urlParams = new URLSearchParams(window.location.search);
-    const movieId = urlParams.get('id');
+    movieId = urlParams.get('id');
+
 
     GetMovieInformation(movieId, function(movieDetails) {
         console.log("movieDetails", movieDetails);
 
+        // set movie title and backdrop
+        movieTitle = movieDetails.original_title;
+        backDropPath = `${TMDB_IMAGE_API_BASE_URL}${movieDetails.backdrop_path}`;
+
         // Movie Information
-        let backDropPath = `${TMDB_IMAGE_API_BASE_URL}${movieDetails.backdrop_path}`;
         $("#movie-title").text(movieDetails.title);
         $(".summary").find(".movie-summary").html(movieDetails.overview);
         $("#individual-movie-img").attr("src", backDropPath)
@@ -125,4 +134,42 @@ function getImgUrl(imgPath) {
     }
 
     return `${TMDB_IMAGE_API_BASE_URL}/${imgPath}`;
+}
+
+
+
+function addToWatchLater(){
+    let movieIsSaved = false;
+    let movie = {"movieId":movieId,"title":movieTitle,"movieBackdrop":backDropPath};
+    // get saved movies
+    let savedMovies = localStorage.getItem("watch_later_list");
+    // check if user has movies saved
+    if(savedMovies !== null){
+        // convert saved movie string to readable array
+        savedMovies = JSON.parse(savedMovies);
+        // check if movie is already in the watch later list
+        // console.log(savedMovies);
+        for(let loop_count = 0; loop_count < savedMovies.length; loop_count++){
+            if(savedMovies[loop_count].movieId === movieId){
+               movieIsSaved = true;
+                //show an alert when the movie is already in 
+                // the watch later list
+                alert(`${movieTitle} has already been added to the watch later list.`);
+            }
+        }
+
+        // add movie to the watch later list
+        if(movieIsSaved === false){
+            savedMovies.push(movie);
+            // save updated movie list
+            let watch_later_list = JSON.stringify(savedMovies);
+            localStorage.setItem("watch_later_list",watch_later_list);
+        }
+
+
+    }else{
+        let watch_later_list = JSON.stringify([movie]);
+        localStorage.setItem("watch_later_list",watch_later_list);
+    }
+    
 }
