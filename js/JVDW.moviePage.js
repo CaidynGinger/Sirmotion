@@ -137,7 +137,7 @@ function getImgUrl(imgPath) {
 }
 
 
-
+// add movies to watchlater page 
 function addToWatchLater(){
     let movieIsSaved = false;
     let movie = {"movieId":movieId,"title":movieTitle,"movieBackdrop":backDropPath};

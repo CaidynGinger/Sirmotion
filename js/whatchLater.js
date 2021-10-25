@@ -17,7 +17,7 @@ function getWathcLaterMovie(){
         let movieId = savedMovies[loop_count].movieId;
 
         // create liked movie div
-        let movieDiv = '<div class="col-lg-2 col-md-3 col-sm-6 movive-item"><div class="child watch-later-movie" style="background-image:url('+movieBackdrop+');background-size:cover"><span>'+movieTitle+'<span> <button onclick="removeFromList('+Number(movieId)+')">Remove</button></div></div>';
+        let movieDiv = '<div class="col-lg-2 col-md-3 col-sm-6 movive-item"><div class="child watch-later-movie" style="background-image:url('+movieBackdrop+');background-size:cover"><span>'+movieTitle+'<span> <button class="remove-btn" onclick="removeFromList('+Number(movieId)+')">Remove</button></div></div>';
         $("#watch-later-list").append(movieDiv);
     }
 
@@ -44,8 +44,25 @@ function removeFromList(movieId){
             localStorage.setItem("watch_later_list",JSON.stringify(savedMovies));
 
             // remove item
+            $(document).ready(function () {
+                $(".remove-btn").onclick(function(){
+                    $(".child").find(movieId).remove()
+                })
             
+                
+            });
 
         }
     }
+   
 }
+$(document).ready(function () {
+    $(".child").mouseenter(function(){
+        $(this).find(".remove-btn").fadeIn()
+    }) 
+    $(".child").mouseleave(function(){
+        $(this).find(".remove-btn").fadeOut()
+    }) 
+
+
+});
