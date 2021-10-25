@@ -89,7 +89,7 @@ p {
 }
 
 .child {
-  width: 90%;
+  width: 170px;
   height: 270px;
   background-color: rgb(153, 153, 153);
 
@@ -101,6 +101,7 @@ p {
 .footer {
   background-color: rgb(88, 88, 88);
   height: 100px;
+  bottom: 0;
 }
 
 .child.watch-later-movie {
@@ -132,4 +133,16 @@ p {
   font-family: var(--montserratFontFamily);
   border-radius: 5px;
   position: relative;
+}
+
+@media screen and (max-width: 576px) {
+  .child {
+    width: 40%;
+    height: 170px;
+    background-color: rgb(153, 153, 153);
+
+    margin: 0, auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
