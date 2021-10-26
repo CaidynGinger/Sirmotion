@@ -33,3 +33,11 @@ function GetFilteredMovies(year = undefined, selectedGenres, rating = 0, callbac
         callbackFunction(result.results);
     });
 }
+
+// get search results
+function GetSearchResults(search_term,callbackFunction){
+    var url = `${TMDB_BASE_URL}search/movie?api_key=${TMDB_API_KEY}&query=${search_term}`;
+    $.getJSON(url, function(result) {
+        callbackFunction(result.results);
+    }); 
+}

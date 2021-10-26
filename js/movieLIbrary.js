@@ -60,3 +60,18 @@ function SetMovies(movies = []) {
         $(this).html(`<img class="movie-tile-img" src="${TMDB_IMAGE_API_BASE_URL}${currentMovie.poster_path}" alt="${currentMovie.title} image">`);
     });
 }
+
+// search method called when user enters in a value on search input
+function SearchMovies(event){
+    let search_term = event.target.value;
+    // if search term is empty don't continu with function
+    if (search_term === ""){
+        applyFilters();
+         return false;
+    }
+    
+    // get search from imdb using the api call in JVDW.tmdb.js
+    let search_results = GetSearchResults(search_term,function(result){
+        SetMovies(result);
+    });
+}
