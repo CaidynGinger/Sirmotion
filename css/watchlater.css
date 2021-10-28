@@ -23,7 +23,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 450px;
-  background-color: grey;
+
   text-align: left;
   padding-top: 200px;
 }
@@ -61,6 +61,7 @@ h2 {
   color: #fff;
   line-height: 2em;
   font-family: var(--audioWideFontFamily);
+  z-index: 2;
 }
 p {
   font-size: 1.1em;
@@ -69,9 +70,7 @@ p {
   font-weight: 400;
   max-width: 700px;
 }
-.my-list {
-  background-color: rgb(14, 14, 14);
-}
+
 .movie-item {
   height: 25vh;
   display: flex;
@@ -96,12 +95,6 @@ p {
   margin: 0, auto;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.footer {
-  background-color: rgb(88, 88, 88);
-  height: 100px;
-  bottom: 0;
 }
 
 .child.watch-later-movie {

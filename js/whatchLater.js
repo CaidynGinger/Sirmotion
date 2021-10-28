@@ -46,7 +46,7 @@ function removeFromList(movieId){
             // remove item
             $(document).ready(function () {
                 $(".remove-btn").click(function(){
-                    $(".child").find(movieId).remove()
+                    $(movieId).remove()
                 })
             
                 
