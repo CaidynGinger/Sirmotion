@@ -13,7 +13,7 @@ function GetMostPopularMovies(callbackFunction) {
 
 function GetMovieInformation(movieId, callbackFunction) {
     // https://developers.themoviedb.org/3/movies/get-movie-details
-    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US&append_to_response=reviews,credits,videos,images`, function(result) {
+    $.getJSON(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&append_to_response=reviews,credits,videos,images&language=en-US&include_image_language=en`, function(result) {
         callbackFunction(result);
     });
 }
@@ -35,9 +35,9 @@ function GetFilteredMovies(year = undefined, selectedGenres, rating = 0, callbac
 }
 
 // get search results
-function GetSearchResults(search_term,callbackFunction){
+function GetSearchResults(search_term, callbackFunction) {
     var url = `${TMDB_BASE_URL}search/movie?api_key=${TMDB_API_KEY}&query=${search_term}`;
     $.getJSON(url, function(result) {
         callbackFunction(result.results);
-    }); 
+    });
 }
