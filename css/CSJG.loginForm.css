@@ -112,6 +112,18 @@ form p {
     color: white;
 }
 
+@media screen and (max-width: 576px){
+
+    .button-container{
+        width: 70%;
+        height: 40px;
+
+    }
+    .button-container div a{
+        font-size:  18px;
+    }
+}
+
 .form-box{
     position: relative;
     height: 350px;
