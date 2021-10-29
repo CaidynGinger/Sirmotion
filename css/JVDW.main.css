@@ -190,6 +190,10 @@ body {
     margin-left: 0;
 }
 
+.btn-like:hover {
+    color: #706FD3;
+}
+
 .media-btn {
     background-color: transparent;
     color: white;
