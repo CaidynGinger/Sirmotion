@@ -47,6 +47,7 @@ footer{
 .social-list-links ul li{
     display: inline-block;
     margin: 10px 10px;
+    cursor: pointer;
 }
 
 .social-list-links ul li a svg{
@@ -58,6 +59,11 @@ footer{
 .social-list-links ul li a svg path,
 .social-list-links ul li a svg circle{
     stroke: white;
+}
+
+.social-list-links ul li a:hover svg path,
+.social-list-links ul li a:hover svg circle{
+    stroke: #706FD3;
 }
 
 .copy-right-text{
