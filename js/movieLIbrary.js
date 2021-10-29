@@ -62,16 +62,16 @@ function SetMovies(movies = []) {
 }
 
 // search method called when user enters in a value on search input
-function SearchMovies(event){
+function SearchMovies(event) {
     let search_term = event.target.value;
     // if search term is empty don't continu with function
-    if (search_term === ""){
+    if (search_term === "") {
         applyFilters();
-         return false;
+        return false;
     }
-    
+
     // get search from imdb using the api call in JVDW.tmdb.js
-    let search_results = GetSearchResults(search_term,function(result){
+    let search_results = GetSearchResults(search_term, function(result) {
         SetMovies(result);
     });
 }

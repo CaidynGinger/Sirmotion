@@ -212,8 +212,6 @@ body {
 }
 
 .cast-img {
-    width: 170px;
-    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     margin: 5px;
@@ -304,6 +302,10 @@ select:active {
     #movie-title-home {
         font-size: 1.4rem;
     }
+    .cast-img {
+        width: 140px;
+        height: 110px;
+    }
     .review-img {
         height: 45px;
         width: 45px;
@@ -356,6 +358,10 @@ select:active {
 @media (min-width: 992px) {
     #movie-title-home {
         font-size: 3rem;
+    }
+    .cast-img {
+        width: 170px;
+        height: 140px;
     }
     .home-movie {
         height: 80vh;

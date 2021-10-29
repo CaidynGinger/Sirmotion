@@ -49,7 +49,7 @@ $(document).ready(async function() {
         let cast = movieDetails.credits.cast.slice(0, 6);
         let castRow = $(".movie-cast-imgs");
         cast.forEach(castMember => {
-            $(castRow).append(`<div class="row col-6 col-md-2 col-lg-2 m-auto" style="text-align: center">
+            $(castRow).append(`<div class="row col-6 col-md-2 col-lg-2" style="text-align: center">
                 <img class="col-12 cast-img mx-auto" src=${getImgUrl(castMember.profile_path)}>
                 <div class="col-12 cast-member">${castMember.name}</div>
                 <div class="col-12 cast-role">as ${castMember.character}</div>
