@@ -7,7 +7,7 @@ function VerifyUser() {
     if (sessionStorage.getItem('userName')) {
         console.log("logged")
     } else {
-        // window.location.href = '../CSJG.index.html'
+        window.location.href = '../CSJG.index.html'
     }
 }
 
